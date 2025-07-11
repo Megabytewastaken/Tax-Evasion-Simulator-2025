@@ -1,4 +1,5 @@
 #include "Raylib.h"
+#include "character.h"
 
 struct AnimData
 {
@@ -13,11 +14,7 @@ int main()
 {
 	const int winwid = 1920;
 	const int winhei = 1080;
-	int circenx = winwid / 2;
-	int circeny = winhei / 2;
-	int cirad = 25;
-	float speed = 1;
-	float basespeed = 12.5;
+	
 	bool mainmenu = true;
 
 	InitWindow(winwid, winhei, "Evade Taxes.com (NO ADS)");
@@ -32,6 +29,7 @@ int main()
 		0
 	};
 
+	character evader;
 	
 	SetTargetFPS(60);
 
@@ -50,34 +48,10 @@ int main()
 
 
 		//Circle
-		DrawCircle(circenx, circeny, cirad + 5, BLACK);
-		DrawCircle(circenx, circeny, cirad, PINK);
+		evader.Tick(dT);
 
 		//Movement
-		if (IsKeyDown(KEY_A) && circenx >  50)
-		{
-			circenx = circenx - speed;
-		}
-		if (IsKeyDown(KEY_S) && circeny < winhei - 50)
-		{
-			circeny = circeny + speed;
-		}
-		if (IsKeyDown(KEY_D) && circenx < winwid - 50)
-		{
-			circenx = circenx + speed;
-		}
-		if (IsKeyDown(KEY_W) && circeny > 50)
-		{
-			circeny = circeny - speed;
-		}
-		if (IsKeyDown(KEY_LEFT_SHIFT))
-		{
-			speed = basespeed * 2;
-		}
-		else
-		{
-			speed = basespeed;
-		}
+	
 
 		if (IsKeyPressed(KEY_SPACE))
 		{

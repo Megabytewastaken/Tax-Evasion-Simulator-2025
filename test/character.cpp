@@ -4,7 +4,17 @@
 
 
 
-void character::getMovementInput(int& circenx, int& circeny)
+void character::setScreenPos(int winwid, int winhei)
+{
+}
+void character::Tick(float dT)
+{
+	DrawCircle(circenx, circeny, cirad + 5, BLACK);
+	DrawCircle(circenx, circeny, cirad, PINK);
+
+	getMovementInput();
+}
+void character::getMovementInput()
 {
 		if (IsKeyDown(KEY_A) && circenx > 50)
 		{

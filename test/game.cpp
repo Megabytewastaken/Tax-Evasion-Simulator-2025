@@ -1,32 +1,14 @@
 #include "Raylib.h"
 #include "character.h"
-struct AnimData
-{
-	Rectangle rec;
-	Vector2 pos;
-	int frame;
-	float updateTime;
-	float runningTime;
-};
 
-AnimData updanimdata(AnimData data, float dT, int maxframe, int startframe)
-{
-	data.runningTime += dT;
-	if (data.runningTime >= data.updateTime)
-	{
-		data.runningTime = 0.0f;
-		data.frame++;
-		if (data.frame > maxframe)
-		{
-			data.frame = startframe;
-		}
-		data.rec.x = data.frame * data.rec.width;
-	}
-	return data;
-}
 
 int main()
 {
+	float runtime{};
+	
+
+
+
 	const int winwid = 1920;
 	const int winhei = 1080;	
 	character evader;
@@ -55,6 +37,13 @@ int main()
 	};
 
 
+	Rectangle source{mtex.width, 0.0f, mtex.height / 2.0f };
+	//x pos of texture y pos //width scale height scale
+	Rectangle dest{0, 0, (float)texture.width, mtex.height /2};
+
+	updanimdata(menutex, dT, 1, 0);
+
+
 	SetTargetFPS(60);
 
 	while (!WindowShouldClose())
@@ -73,6 +62,19 @@ int main()
 		//Circle
 		evader.Tick(dT);
 
+
+		runtime += dT;
+		if (runtime >= updtime)
+		{
+			runtime = 0.0f;
+			frame++;
+			if (frame > maxframe)
+			{
+				frame = 0;
+			}
+			//data.rec.x = frame * data.rec.width;
+		}
+
 		//Menu Logic
 		if (IsKeyPressed(KEY_SPACE) && mainmenu)
 		{
@@ -86,13 +88,14 @@ int main()
 		{
 			DrawTextureRec(mtex, menutex.rec, menutex.pos, WHITE);
 			updanimdata(menutex, dT, 1, 0);
-	
+
 		}
 		if (IsKeyPressed(KEY_F))
 		{
 			ToggleFullscreen();
 		}
 
-			EndDrawing();
-		}
+		EndDrawing();
 	}
+	}
+}

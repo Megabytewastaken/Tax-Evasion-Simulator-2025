@@ -89,11 +89,13 @@ int main()
 		}
 
 		//Menu Logic
-		if (IsKeyPressed(KEY_SPACE))
+		if (IsKeyPressed(KEY_SPACE) && mainmenu)
 		{
 			mainmenu = false;
 			SetWindowTitle("Tax Evasion Simulator 2025 (NO ADS)");
 			HideCursor();
+			SetClipboardText("I HATE THE IRS!");
+			OpenURL("https://www.youtube.com/watch?v=mt6O3US9IE4");
 		}
 		if (mainmenu)
 		{

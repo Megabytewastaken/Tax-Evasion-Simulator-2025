@@ -128,14 +128,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClCompile Include="character.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="tax.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\taxform.png" />
     <Image Include="assets\taxform_scaled_2x_pngcrushed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="character.h" />
+    <ClInclude Include="tax.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,7 +2,9 @@
 
 
 
-void character::getMovementInput(//"direction")
+
+
+void character::getMovementInput(int& circenx, int& circeny)
 {
 		if (IsKeyDown(KEY_A) && circenx > 50)
 		{

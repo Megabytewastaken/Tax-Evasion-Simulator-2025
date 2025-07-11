@@ -28,7 +28,7 @@ AnimData updanimdata(AnimData data, float dT, int maxframe, int startframe)
 int main()
 {
 	const int winwid = 1920;
-	const int winhei = 1080;
+	const int winhei = 1080;	
 	character evader;
 
 	bool mainmenu = true;
@@ -47,11 +47,11 @@ int main()
 	};
 	Texture2D mtex = LoadTexture("assets/mainmenu.png");
 	AnimData menutex{
-		{0, 0, mtex.width, mtex.height},
+		{0, 0, mtex.width, mtex.height/2},
 		{0, 0},
 		0,
-		0,
-		0
+		1.0f / 2.0f,
+		0.0f
 	};
 
 
@@ -85,6 +85,8 @@ int main()
 		if (mainmenu)
 		{
 			DrawTextureRec(mtex, menutex.rec, menutex.pos, WHITE);
+			updanimdata(menutex, dT, 1, 0);
+	
 		}
 		if (IsKeyPressed(KEY_F))
 		{

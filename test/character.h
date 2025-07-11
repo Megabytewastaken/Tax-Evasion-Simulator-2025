@@ -7,7 +7,7 @@ class character
 private:
 	int frame{};
 	float runningTime{};
-	
+
 	float basespeed = 12.5;
 	const int winwid = 1920;
 	const int winhei = 1080;
@@ -23,7 +23,7 @@ public:
 
 
 	}
-	
+
 	void setScreenPos(int winwid, int winhei);
 	void getMovementInput();
 	void Tick(float deltaTime);
@@ -33,8 +33,7 @@ public:
 	{
 
 	}
-			
+
 
 
 };
-

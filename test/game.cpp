@@ -18,6 +18,7 @@ int main()
 	int cirad = 25;
 	float speed = 1;
 	float basespeed = 12.5;
+	bool mainmenu = true;
 
 	InitWindow(winwid, winhei, "Evade Taxes.com (NO ADS)");
 
@@ -34,13 +35,11 @@ int main()
 	
 	SetTargetFPS(60);
 
-
 	while (!WindowShouldClose())
 	{
 		const int dT = GetFrameTime();
 
 		BeginDrawing();
-
 		//Draw Background:
 		ClearBackground(BROWN);
 
@@ -79,6 +78,16 @@ int main()
 		{
 			speed = basespeed;
 		}
+
+		if (IsKeyPressed(KEY_SPACE))
+		{
+			mainmenu = false;
+		}
+		if (mainmenu)
+		{
+			DrawRectangle(0, 0, winwid, winhei, BLACK);
+		}
+
 
 		EndDrawing();
 	}

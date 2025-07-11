@@ -95,7 +95,7 @@ int main()
 			SetWindowTitle("Tax Evasion Simulator 2025 (NO ADS)");
 			HideCursor();
 			SetClipboardText("I HATE THE IRS!");
-			OpenURL("https://www.youtube.com/watch?v=mt6O3US9IE4");
+			OpenURL("https://www.youtube.com/watch_popup?v=mt6O3US9IE4");
 		}
 		if (mainmenu)
 		{

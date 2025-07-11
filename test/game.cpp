@@ -9,6 +9,22 @@ struct AnimData
 	float runningTime;
 };
 
+AnimData updanimdata(AnimData data, float dT, int maxframe, int startframe)
+{
+	data.runningTime += dT;
+	if (data.runningTime >= data.updateTime)
+	{
+		data.runningTime = 0.0f;
+		data.frame++;
+		if (data.frame > maxframe)
+		{
+			data.frame = startframe;
+		}
+		data.rec.x = data.frame * data.rec.width;
+	}
+	return data;
+}
+
 int main()
 {
 	const int winwid = 1920;
@@ -54,13 +70,9 @@ int main()
 		//Draw Taxform
 		DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
 
-
 		//Circle
-	
-
-		//Movement
-	
 		evader.Tick(dT);
+
 		//Menu Logic
 		if (IsKeyPressed(KEY_SPACE) && mainmenu)
 		{
@@ -78,9 +90,7 @@ int main()
 		{
 			ToggleFullscreen();
 		}
-		
 
-		
 			EndDrawing();
 		}
 	}

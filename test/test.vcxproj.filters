@@ -35,6 +35,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="assets\New Piskel.piskel" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tax.h">

@@ -137,6 +137,7 @@
     <Image Include="assets\taxform_scaled_2x_pngcrushed.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="assets\New Piskel.piskel" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

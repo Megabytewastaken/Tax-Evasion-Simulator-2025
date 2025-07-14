@@ -2,18 +2,9 @@
 #include "character.h"
 #include "menu.h"
 
-
-
-
 int main()
-{
-	
-
-
-	const int winwid = 1920;
+{	const int winwid = 1920;
 	const int winhei = 1080;	
-	
-	bool mainmenu = true;
 
 	//Make window + title
 	InitWindow(winwid, winhei, "Enter to close the main menu!");

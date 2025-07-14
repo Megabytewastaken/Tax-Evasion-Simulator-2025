@@ -4,8 +4,6 @@
 class menu
 {
 
-	//menutex = mmenu
-
 private:
 	
 	

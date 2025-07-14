@@ -5,7 +5,7 @@ class character
 
 
 private:
-	int frame{};
+
 	
 
 	float basespeed = 12.5;
@@ -28,7 +28,8 @@ public:
 	void setScreenPos(int winwid, int winhei);
 	void getMovementInput();
 	void Tick(float deltaTime);
-
+	int frame{};
+	float updtime{};
 
 	~character()
 	{

@@ -13,19 +13,19 @@ void character::Tick(float dT)
 }
 void character::getMovementInput()
 {
-	if (IsKeyDown(KEY_A) && circenx > 50)
+	if (IsKeyDown(KEY_A) && circenx > 75)
 	{
 		circenx = circenx - speed;
 	}
-	if (IsKeyDown(KEY_S) && circeny < winhei - 50)
+	if (IsKeyDown(KEY_S) && circeny < winhei - 75)
 	{
 		circeny = circeny + speed;
 	}
-	if (IsKeyDown(KEY_D) && circenx < winwid - 50)
+	if (IsKeyDown(KEY_D) && circenx < winwid - 75)
 	{
 		circenx = circenx + speed;
 	}
-	if (IsKeyDown(KEY_W) && circeny > 50)
+	if (IsKeyDown(KEY_W) && circeny > 75)
 	{
 		circeny = circeny - speed;
 	}

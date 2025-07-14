@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="character.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="map.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="tax.cpp" />
     <ClCompile Include="Utils.cpp" />
@@ -150,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
+    <ClInclude Include="map.h" />
     <ClInclude Include="menu.h" />
     <ClInclude Include="tax.h" />
     <ClInclude Include="Utils.h" />

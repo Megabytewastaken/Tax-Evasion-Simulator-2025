@@ -1,7 +1,6 @@
 #include "Raylib.h"
 #include "character.h"
 
-
 int main()
 {
 	float runtime{};
@@ -32,18 +31,11 @@ int main()
 
 		BeginDrawing();
 		
-		DrawTexture(menutex, 0, 0, WHITE);
-		DrawTextureV(menutex, Vector2{ 0, 0 }, WHITE);
-		DrawTextureEx(menutex, Vector2{ 0, 0 }, 0, 1.0f, WHITE);
-		
-		Rectangle ssource = Rectangle{ 0, 0, 0, 0 };
-		DrawTextureRec(menutex, ssource, Vector2{ 0, 0 }, WHITE);
-
 
 
 		//Draw Background:
 		ClearBackground(BROWN);
-		//DrawRectangle(50, 50, winwid - 100, winhei - 100, BEIGE);
+		DrawRectangle(50, 50, winwid - 100, winhei - 100, BEIGE);
 
 		//Draw Taxform
 		//DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
@@ -66,10 +58,10 @@ int main()
 			//data.rec.x = frame * data.rec.width;
 		}
 
-		//float frameHeight = menutex.height / (maxframe);
-		//Rectangle tsource{ 0.0f, (int)frame * frameHeight, (float)menutex.width, frameHeight};
-		////x pos of texture y pos //width scale height scale
-		//Rectangle tdest{ 0, 0, (float)menutex.width, frameHeight};
+		float frameHeight = menutex.height / (maxframe);
+		Rectangle tsource{ 0.0f, (int)frame * frameHeight/2, (float)menutex.width, frameHeight};
+		//x pos of texture y pos //width scale height scale
+		Rectangle tdest{ 0, 0, (float)menutex.width, frameHeight};
 
 		//Menu Logic
 		if (IsKeyPressed(KEY_ENTER) && mainmenu)
@@ -82,7 +74,7 @@ int main()
 		}
 		if (mainmenu)
 		{
-			//DrawTexturePro(menutex, tsource, tdest, Vector2{}, 0.f, WHITE);
+			DrawTexturePro(menutex, tsource, tdest, Vector2{}, 0.f, WHITE);
 		}
 		if (IsKeyPressed(KEY_F))
 		{

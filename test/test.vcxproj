@@ -133,6 +133,7 @@
     <ClCompile Include="tax.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="assets\Char_001.png" />
     <Image Include="assets\mainmenu.png" />
     <Image Include="assets\taxform.png" />
     <Image Include="assets\taxform_scaled_2x_pngcrushed.png" />

@@ -24,12 +24,18 @@
     <ClCompile Include="character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\taxform.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\taxform_scaled_2x_pngcrushed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\mainmenu.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -42,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="character.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

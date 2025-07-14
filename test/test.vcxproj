@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="character.cpp" />
     <ClCompile Include="game.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="tax.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="character.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="tax.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -135,8 +135,12 @@
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="assets\back.png" />
     <Image Include="assets\Char_001.png" />
+    <Image Include="assets\forward.png" />
+    <Image Include="assets\left.png" />
     <Image Include="assets\mainmenu.png" />
+    <Image Include="assets\right.png" />
     <Image Include="assets\taxform.png" />
     <Image Include="assets\taxform_scaled_2x_pngcrushed.png" />
   </ItemGroup>

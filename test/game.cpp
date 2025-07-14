@@ -1,6 +1,8 @@
 #include "Raylib.h"
 #include "character.h"
 #include "menu.h"
+#include "map.h"
+#include "Utils.h"
 
 int main()
 {	const int winwid = 1920;
@@ -10,6 +12,7 @@ int main()
 	InitWindow(winwid, winhei, "Enter to close the main menu!");
 	character evader;
 	menu mainmenuu;
+	map mape;
 	
 	Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
 	

@@ -24,6 +24,7 @@ private:
 	float runtime{ 0.0f };
 	float frame{ 0 };
 	float updtime{ 1.f / 2.f };
+	int facing{ 0 };
 	
 
 	//int ball = circenx, circeny, cirad;
@@ -36,8 +37,12 @@ public:
 	}
 	Rectangle charSource{ };
 	Rectangle charDest{};
+	Texture2D charText = LoadTexture("assets/down.png");
 
 	Texture2D charWup = LoadTexture("assets/up.png");
+	Texture2D charAleft = LoadTexture("assets/left.png");
+	Texture2D charSdown = LoadTexture("assets/down.png");
+	Texture2D charDright = LoadTexture("assets/right.png");
 	//float runtime{};
 	//void setScreenPos(int winwid, int winhei);
 	///void getMovementInput();

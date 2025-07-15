@@ -1,4 +1,3 @@
-#include "Raylib.h"
 #include "character.h"
 #include "menu.h"
 #include "map.h"
@@ -15,7 +14,7 @@ int main()
 	map mape;
 	
 	Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
-	
+	Texture2D downwalktex = LoadTexture("assets/forward.png");
 
 	SetTargetFPS(60);
 

@@ -20,7 +20,7 @@ private:
 	float runtime{ 0.0f };
 	float frame{ 0 };
 	float updtime{ 1.f / 2.f };
-	Texture2D downwalktex = LoadTexture("assets/forward.png");
+	
 
 	//int ball = circenx, circeny, cirad;
 

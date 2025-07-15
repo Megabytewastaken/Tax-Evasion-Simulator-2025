@@ -8,8 +8,8 @@ class tax
 private:	
 	int randscreenhei = GetRandomValue(0, GetScreenHeight());
 	int randscreenwid = GetRandomValue(0, GetScreenWidth());
-	std::vector<Vector2> projectileSpawn;
-	std::vector<tax> taxes;
+	vector<Vector2> projectileSpawn;
+	vector<tax> taxes;
 
 
 

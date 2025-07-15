@@ -136,9 +136,9 @@
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="assets\back.png" />
+    <Image Include="assets\up.png" />
     <Image Include="assets\Char_001.png" />
-    <Image Include="assets\forward.png" />
+    <Image Include="assets\down.png" />
     <Image Include="assets\left.png" />
     <Image Include="assets\mainmenu.png" />
     <Image Include="assets\right.png" />

@@ -30,6 +30,9 @@
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\taxform.png">
@@ -39,6 +42,21 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\mainmenu.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\up.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\Char_001.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\down.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\left.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\right.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
@@ -57,6 +75,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

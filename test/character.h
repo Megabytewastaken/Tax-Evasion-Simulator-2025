@@ -6,10 +6,13 @@ class character
 
 
 private:
-
 	
 
+	Texture2D charWup = LoadTexture("assets/up.png");
+
+
 	float basespeed = 12.5;
+
 	const int winwid = 1920;
 	const int winhei = 1080;
 	float speed = 1;

@@ -1,5 +1,6 @@
 #pragma once
 #include "raylib.h"
+#include "raymath.h"
 class character
 {
 
@@ -20,7 +21,7 @@ private:
 	float runtime{ 0.0f };
 	float frame{ 0 };
 	float updtime{ 1.f / 2.f };
-	Texture2D downwalktex = LoadTexture("assets/forward.png");
+	
 
 	//int ball = circenx, circeny, cirad;
 
@@ -37,6 +38,10 @@ public:
 	void Tick(float deltaTime);
 	int frame{};
 	float updtime{};
+	void getMovementInput(Vector2& direction);
+	void undoMovement();
+	Rectangle source{};
+	Rectangle dest{};
 
 	~character()
 	{

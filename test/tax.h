@@ -1,5 +1,6 @@
 #pragma once
 #include "Utils.h";
+
 class tax
 {
 
@@ -7,17 +8,19 @@ class tax
 private:	
 	int randscreenhei = GetRandomValue(0, GetScreenHeight());
 	int randscreenwid = GetRandomValue(0, GetScreenWidth());
-
+	std::vector<Vector2> projectileSpawn;
+	std::vector<tax> taxes;
 
 
 
 
 public:
-	tax()
+	tax(Vector2 spawnPos)
 	{
-
+		SpawnPos = spawnPos;
 	}
 
+	Vector2 SpawnPos{};
 
 
 

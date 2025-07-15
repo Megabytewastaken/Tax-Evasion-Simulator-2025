@@ -18,3 +18,4 @@ void Utils::UpdateAnimation(float dT, float& runtime, float updtime, float& fram
 
 	
 }
+bool Utils::mainmenu = true;

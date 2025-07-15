@@ -19,16 +19,16 @@ void menu::Tick(float dT)
 
 void menu::getMenuInput()
 {
-    if (IsKeyPressed(KEY_ENTER) && mainmenu)
+    if (IsKeyPressed(KEY_ENTER) && Utils::mainmenu)
     {
-        mainmenu = false;
+        Utils::mainmenu = false;
         SetWindowTitle("Tax Evasion Simulator 2025 (NO ADS)");
         HideCursor();
         //SetClipboardText("I HATE THE IRS!");
         //OpenURL("https://www.youtube.com/watch_popup?v=mt6O3US9IE4");
     }
 
-    if (mainmenu)
+    if (Utils::mainmenu)
     {
         DrawTexturePro(men, tsource, tdest, Vector2{}, 0.f, WHITE);
     }

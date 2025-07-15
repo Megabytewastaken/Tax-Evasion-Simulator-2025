@@ -13,7 +13,7 @@ void character::Tick(float dT)
 	Rectangle charSource{ (float)charWup.width / 4, 0, (float)charWup.width / 4, (float)charWup.height };
 	Rectangle charDest{ winwid, winhei, (float)charWup.width / 4, (float)charWup.height };
 	getMovementInput(direction);
-	if (!mainmenu)
+	if (!Utils::mainmenu)
 	{
 		DrawTexturePro(charWup, charSource, charDest, Vector2{ (float)winwid / 2,(float)winhei / 2 }, 0.f, WHITE);
 	}

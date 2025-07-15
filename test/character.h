@@ -11,11 +11,11 @@ private:
 	
 
 
-	float basespeed = 12.5;
+	float basespeed = 1200.5;
 
 	const float winwid = 1920;
 	const float winhei = 1080;
-	float speed = 1;
+	float speed = 1200;
 	int circenx = winwid / 2;
 	int circeny = winhei / 2;
 	int cirad = 25;
@@ -44,7 +44,8 @@ public:
 	void Tick(float deltaTime);
 	//int frame{};
 	//float updtime{};
-	void getMovementInput(Vector2& direction);
+	void getMovementInput(Vector2& direction, float deltaTime);
+	Vector2 characterPos{winwid / 2, winhei /2};
 	//void undoMovement();
 	Rectangle source{};
 	Rectangle dest{};

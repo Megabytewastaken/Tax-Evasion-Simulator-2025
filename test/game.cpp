@@ -24,7 +24,7 @@ int main()
 		const float dT = GetFrameTime();
 
 		BeginDrawing();
-		DrawTexture(gameBackground, 50, 50, WHITE);
+		DrawTexture(gameBackground, 0,0 , WHITE);
 
 
 		//Draw Background:

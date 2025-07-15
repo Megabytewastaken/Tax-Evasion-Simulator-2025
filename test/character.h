@@ -1,5 +1,6 @@
 #pragma once
 #include "raylib.h"
+#include "raymath.h"
 class character
 {
 
@@ -31,12 +32,16 @@ public:
 
 	}
 
-	float runtime{};
-	void setScreenPos(int winwid, int winhei);
-	void getMovementInput();
+	//float runtime{};
+	//void setScreenPos(int winwid, int winhei);
+	///void getMovementInput();
 	void Tick(float deltaTime);
-	int frame{};
-	float updtime{};
+	//int frame{};
+	//float updtime{};
+	void getMovementInput(Vector2& direction);
+	//void undoMovement();
+	Rectangle source{};
+	Rectangle dest{};
 
 	~character()
 	{

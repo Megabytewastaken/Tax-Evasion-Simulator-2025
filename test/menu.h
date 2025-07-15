@@ -29,7 +29,7 @@ public:
 	float updtime{1.f / 2.f};
 	Rectangle tsource{};
 	Rectangle tdest{};
-	bool mainmenu = true;
+	
 
 	
 

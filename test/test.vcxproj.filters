@@ -59,10 +59,13 @@
     <Image Include="assets\right.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="assets\gamearea.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="assets\New Piskel.piskel" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tax.h">

@@ -24,6 +24,7 @@ int main()
 		const float dT = GetFrameTime();
 
 		BeginDrawing();
+		
 		DrawTexture(gameBackground, 0,0 , WHITE);
 
 
@@ -37,9 +38,9 @@ int main()
 		Rectangle dest{ 0, 0, (float)taxformtex.width, taxformtex.height};
 		 
 		//Circle
-		evader.Tick(dT);
+		
 		mainmenuu.Tick(dT);
-
+		evader.Tick(dT);
 		
 		
 

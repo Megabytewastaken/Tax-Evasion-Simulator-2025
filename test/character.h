@@ -8,13 +8,13 @@ class character
 private:
 	
 
-	Texture2D charWup = LoadTexture("assets/up.png");
+	
 
 
 	float basespeed = 12.5;
 
-	const int winwid = 1920;
-	const int winhei = 1080;
+	const float winwid = 1920;
+	const float winhei = 1080;
 	float speed = 1;
 	int circenx = winwid / 2;
 	int circeny = winhei / 2;
@@ -32,9 +32,12 @@ public:
 	character()
 	{
 
-
+			
 	}
+	Rectangle charSource{ };
+	Rectangle charDest{};
 
+	Texture2D charWup = LoadTexture("assets/up.png");
 	//float runtime{};
 	//void setScreenPos(int winwid, int winhei);
 	///void getMovementInput();

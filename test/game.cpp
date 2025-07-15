@@ -14,7 +14,7 @@ int main()
 	map mape;
 	
 	Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
-	Texture2D downwalktex = LoadTexture("assets/forward.png");
+	
 	Texture2D gameBackground = LoadTexture("assets/gamearea.png");
 
 	SetTargetFPS(60);

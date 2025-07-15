@@ -11,9 +11,7 @@ void character::Tick(float dT)
 	//DrawCircle(circenx, circeny, cirad, PINK);
 	Vector2 direction{};
 	getMovementInput(characterPos,dT);
-	Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
-	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height};
-	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4 * 0.75, (float)charWup.height * 0.75 };
+	
 	
 	switch (facing) {
 	 case 1:
@@ -33,7 +31,17 @@ void character::Tick(float dT)
 		break;
 	}
 	
-	
+	if (facing != 5)
+	{
+		Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
+	}
+	else
+	{
+		frame = 1;
+	}
+	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
+	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4 * 0.75, (float)charWup.height * 0.75 };
+
 	if (!Utils::mainmenu)
 	{
 		DrawTexturePro(charText, charSource, charDest, Vector2{ (float)winwid / 2,(float)winhei / 2 }, 0.f, WHITE);
@@ -69,7 +77,7 @@ void character::getMovementInput(Vector2& direction, float deltaTime)
 	}
 	else
 	{
-		facing = 1;
+		facing = 5;
 	}
 
 	if (IsKeyDown(KEY_LEFT_SHIFT))

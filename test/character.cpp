@@ -11,8 +11,8 @@ void character::Tick(float dT)
 	//DrawCircle(circenx, circeny, cirad, PINK);
 	Vector2 direction{};
 	getMovementInput(characterPos,dT);
-
-	Rectangle charSource{ (float)charWup.width / 4, 0, (float)charWup.width / 4, (float)charWup.height };
+	Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
+	Rectangle charSource{ frame * charWup.width / 4, 0, (float)charWup.width / 4, (float)charWup.height };
 	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4, (float)charWup.height };
 
 	switch (facing) {

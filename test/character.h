@@ -20,10 +20,10 @@ private:
 	int circeny = winhei / 2;
 	int cirad = 25;
 
-	float maxframe{ 1 };
+	float maxframe{ 4 };
 	float runtime{ 0.0f };
 	float frame{ 0 };
-	float updtime{ 1.f / 2.f };
+	float updtime{ 1.f / 4.f };
 	int facing{ 0 };
 	
 

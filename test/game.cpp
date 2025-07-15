@@ -15,6 +15,7 @@ int main()
 	
 	Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
 	Texture2D downwalktex = LoadTexture("assets/forward.png");
+	Texture2D gameBackground = LoadTexture("assets/gamearea.png");
 
 	SetTargetFPS(60);
 
@@ -23,18 +24,18 @@ int main()
 		const float dT = GetFrameTime();
 
 		BeginDrawing();
-		
+		DrawTexture(gameBackground, 50, 50, WHITE);
 
 
 		//Draw Background:
 		ClearBackground(BROWN);
-		DrawRectangle(50, 50, winwid - 100, winhei - 100, BEIGE);
+		//DrawRectangle(50, 50, winwid - 100, winhei - 100, BEIGE);
 
 		//Draw Taxform
 		//DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
 		Rectangle source{ taxformtex.width, 0.0f, taxformtex.height};
 		Rectangle dest{ 0, 0, (float)taxformtex.width, taxformtex.height};
-
+		 
 		//Circle
 		evader.Tick(dT);
 		mainmenuu.Tick(dT);

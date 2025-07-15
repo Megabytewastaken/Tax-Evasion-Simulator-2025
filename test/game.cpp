@@ -1,4 +1,3 @@
-#include "Raylib.h"
 #include "character.h"
 #include "menu.h"
 #include "map.h"

@@ -32,7 +32,6 @@ int main()
 
 		//Draw Background:
 		ClearBackground(BROWN);
-		//DrawRectangle(50, 50, winwid - 100, winhei - 100, BEIGE);
 
 		//Draw Taxform
 		//DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
@@ -55,8 +54,7 @@ int main()
 			cash = cash + 1;
 			stupidtimergodieyouevilthing = 0;
 		}
-
-		
+		//DrawRectangle(0, 0, winwid - 75, winhei - 75, PINK);
 		EndDrawing();
 	}
 }

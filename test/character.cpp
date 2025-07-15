@@ -12,9 +12,9 @@ void character::Tick(float dT)
 	Vector2 direction{};
 	getMovementInput(characterPos,dT);
 	Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
-	Rectangle charSource{ frame * charWup.width / 4, 0, (float)charWup.width / 4, (float)charWup.height };
-	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4, (float)charWup.height };
-
+	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height};
+	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4 * 0.75, (float)charWup.height * 0.75 };
+	
 	switch (facing) {
 	 case 1:
 		charText = charSdown;

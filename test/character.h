@@ -11,7 +11,7 @@ private:
 	
 
 
-	float basespeed = 1200.5;
+	float basespeed = 900.5;
 
 	const float winwid = 1920;
 	const float winhei = 1080;

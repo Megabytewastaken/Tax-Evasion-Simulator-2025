@@ -21,7 +21,6 @@ public:
 	}
 	Texture2D men = LoadTexture("assets/mainmenu.png");
 	float maxframe{ 1 };
-
 	float runtime{0.0f};
 	void setScreenPos(int winwid, int winhei);
 	void getMenuInput();

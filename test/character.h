@@ -15,6 +15,13 @@ private:
 	int circenx = winwid / 2;
 	int circeny = winhei / 2;
 	int cirad = 25;
+
+	float maxframe{ 1 };
+	float runtime{ 0.0f };
+	float frame{ 0 };
+	float updtime{ 1.f / 2.f };
+	
+
 	//int ball = circenx, circeny, cirad;
 
 public:

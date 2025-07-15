@@ -33,6 +33,10 @@ void character::getMovementInput()
 	{
 		speed = basespeed * 2;
 	}
+	else if (IsKeyDown(KEY_LEFT_CONTROL))
+	{
+		speed = basespeed / 2;
+	}
 	else
 	{
 		speed = basespeed;

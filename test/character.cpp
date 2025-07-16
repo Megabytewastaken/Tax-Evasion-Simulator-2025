@@ -10,11 +10,10 @@ void character::Tick(float dT)
 	//DrawCircle(circenx, circeny, cirad + 5, BLACK);
 	//DrawCircle(circenx, circeny, cirad, PINK);
 	Vector2 direction{};
+	cout << characterPos.x << " " << characterPos.y << endl;
 	getMovementInput(characterPos,dT);
-	Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
-	Rectangle charSource{ frame * charWup.width / 4, 0, (float)charWup.width / 4, (float)charWup.height };
-	Rectangle charDest{ characterPos.x, characterPos.y, (float)charWup.width / 4, (float)charWup.height };
-
+	
+	
 	switch (facing) {
 	 case 1:
 		charText = charSdown;
@@ -33,12 +32,22 @@ void character::Tick(float dT)
 		break;
 	}
 	
-	
+	if (facing != 5)
+	{
+		Utils::UpdateAnimation(dT, runtime, updtime, frame, maxframe);
+	}
+	else
+	{
+		frame = 1;
+	}
+	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
+	Rectangle charDest{ characterPos.x , characterPos.y , (float)charWup.width / 4 * 0.75, (float)charWup.height * 0.75 };
+
 	if (!Utils::mainmenu)
 	{
-		DrawTexturePro(charText, charSource, charDest, Vector2{ (float)winwid / 2,(float)winhei / 2 }, 0.f, WHITE);
+		DrawTexturePro(charText, charSource, charDest, Vector2{}, 0.f, WHITE);
 	}
-	
+	//DrawRectangleRec(charDest, RED);
 	//WorldPosLastFrame = worldPos;
 	
 	//circenx += direction.x * speed * dT;  // Update X position
@@ -47,29 +56,29 @@ void character::Tick(float dT)
 void character::getMovementInput(Vector2& direction, float deltaTime)
 {
 	
-	if (IsKeyDown(KEY_A))
+	if (IsKeyDown(KEY_A) && characterPos.x > 7 || IsKeyDown(KEY_LEFT) && characterPos.x > 7)
 	{
 		direction.x -= speed * deltaTime;
 		facing = 2;
 	}
-	else if (IsKeyDown(KEY_D))
+	else if (IsKeyDown(KEY_D) && characterPos.x < winwid - 180 || IsKeyDown(KEY_RIGHT) && characterPos.x < winwid - 180)
 	{
 		direction.x += speed * deltaTime;
 		facing = 3;
 	}
-	else if (IsKeyDown(KEY_W))
+	else if (IsKeyDown(KEY_W) && characterPos.y > 7 || IsKeyDown(KEY_UP) && characterPos.y > 7)
 	{
 		direction.y -= speed * deltaTime;
 		facing = 4;
 	}
-	else if (IsKeyDown(KEY_S))
+	else if (IsKeyDown(KEY_S) && characterPos.y < winhei - 210 || IsKeyDown(KEY_DOWN) && characterPos.y < winhei - 210)
 	{
 		direction.y += speed * deltaTime;
 		facing = 1;
 	}
 	else
 	{
-		facing = 1;
+		facing = 5;
 	}
 
 	if (IsKeyDown(KEY_LEFT_SHIFT))

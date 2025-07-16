@@ -11,7 +11,7 @@ private:
 	
 
 
-	float basespeed = 1200.5;
+	float basespeed = 900.5;
 
 	const float winwid = 1920;
 	const float winhei = 1080;
@@ -50,7 +50,8 @@ public:
 	//int frame{};
 	//float updtime{};
 	void getMovementInput(Vector2& direction, float deltaTime);
-	Vector2 characterPos{winwid / 2, winhei /2};
+	Vector2 characterPos{winwid/ 2, winhei/2};
+
 	//void undoMovement();
 	Rectangle source{};
 	Rectangle dest{};

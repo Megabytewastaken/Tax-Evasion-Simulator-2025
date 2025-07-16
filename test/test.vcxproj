@@ -138,7 +138,6 @@
   <ItemGroup>
     <Image Include="assets\gamearea.png" />
     <Image Include="assets\up.png" />
-    <Image Include="assets\Char_001.png" />
     <Image Include="assets\down.png" />
     <Image Include="assets\left.png" />
     <Image Include="assets\mainmenu.png" />

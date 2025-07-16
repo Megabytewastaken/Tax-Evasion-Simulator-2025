@@ -36,8 +36,7 @@ int main()
 
 		//Draw Taxform
 		//DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
-		Rectangle source{ taxformtex.width, 0.0f, taxformtex.height};
-		Rectangle dest{ 0, 0, (float)taxformtex.width, taxformtex.height};
+	
 		 
 		//Circle
 		

@@ -10,7 +10,7 @@ void character::Tick(float dT)
 	//DrawCircle(circenx, circeny, cirad + 5, BLACK);
 	//DrawCircle(circenx, circeny, cirad, PINK);
 	Vector2 direction{};
-	cout << characterPos.x << " " << characterPos.y << endl;
+	//cout << characterPos.x << " " << characterPos.y << endl;
 	getMovementInput(characterPos,dT);
 	
 	
@@ -41,7 +41,7 @@ void character::Tick(float dT)
 		frame = 1;
 	}
 	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
-	Rectangle charDest{ characterPos.x , characterPos.y , (float)charWup.width / 4 * 0.75, (float)charWup.height * 0.75 };
+	Rectangle charDest{ characterPos.x , characterPos.y , (float)charWup.width / 4 * 0.5, (float)charWup.height * 0.5 };
 
 	if (!Utils::mainmenu)
 	{

@@ -2,22 +2,28 @@
 #include "menu.h"
 #include "map.h"
 #include "Utils.h"
+#include "tax.h"
+
+
 
 int main()
-{	const int winwid = 1920;
-	const int winhei = 1080;	
+{	
 	int cash = 0;
 	int stupidtimergodieyouevilthing{0};
+	
+	int stupidtimergodieyouevilthing2thesequal = 0;
 
 	//Make window + title
-	InitWindow(winwid, winhei, "Enter to close the main menu!");
+	InitWindow(Utils::winwid, Utils::winhei, "Enter to close the main menu!");
 	character evader;
 	menu mainmenuu;
 	map mape;
 	
-	Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
+	//Texture2D taxformtex = LoadTexture("assets/taxform_scaled_2x_pngcrushed.png");
 	
 	Texture2D gameBackground = LoadTexture("assets/gamearea.png");
+
+	vector<tax> taxes{};
 
 	SetTargetFPS(60);
 
@@ -35,8 +41,8 @@ int main()
 
 		//Draw Taxform
 		//DrawTextureRec(taxformtex, taxform.rec, taxform.pos, WHITE);
-		Rectangle source{ taxformtex.width, 0.0f, taxformtex.height};
-		Rectangle dest{ 0, 0, (float)taxformtex.width, taxformtex.height};
+		/*Rectangle source{ taxformtex.width, 0.0f, taxformtex.height};
+		Rectangle dest{ 0, 0, (float)taxformtex.width, taxformtex.height};*/
 		 
 		//Circle
 		
@@ -53,8 +59,59 @@ int main()
 		{
 			cash = cash + 1;
 			stupidtimergodieyouevilthing = 0;
+		}	
+		
+		stupidtimergodieyouevilthing2thesequal++;
+
+		
+
+
+		if (stupidtimergodieyouevilthing2thesequal == 10)
+		{
+			
+				int randspawnpointlocation = GetRandomValue(1, 4);
+
+				if (randspawnpointlocation == 1)
+				{
+					float posX = GetRandomValue(0, Utils::winwid);
+					float posY = 0;
+					taxes.emplace_back(Vector2{ posX, posY }, randspawnpointlocation);
+
+				}
+				else if (randspawnpointlocation == 2)
+				{
+					float posX = GetRandomValue(0, Utils::winwid);
+					float posY = Utils::winhei;
+					taxes.emplace_back(Vector2{ posX, posY }, randspawnpointlocation);
+				}
+				else if (randspawnpointlocation == 3)
+				{
+					float posY = GetRandomValue(0, Utils::winhei);
+					float posX = 0;
+					taxes.emplace_back(Vector2{ posX, posY }, randspawnpointlocation);
+				}
+				else if (randspawnpointlocation == 4)
+				{
+					float posX = GetRandomValue(0, Utils::winhei) - 50;
+					float posY = Utils::winwid;
+					taxes.emplace_back(Vector2{ posX, posY }, randspawnpointlocation);
+				}
+			
+			stupidtimergodieyouevilthing2thesequal = 0;
 		}
+		for (auto& tax : taxes) 
+		{
+			tax.tick(dT);
+		}
+
+
 		//DrawRectangle(0, 0, winwid - 75, winhei - 75, PINK);
 		EndDrawing();
 	}
+	UnloadTexture(evader.charText);
+		/*for (auto& tax : taxes)
+		{
+			UnloadTexture();
+		}*/
+
 }

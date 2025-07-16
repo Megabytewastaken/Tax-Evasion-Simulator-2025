@@ -38,16 +38,13 @@
     <Image Include="assets\taxform.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="assets\taxform_scaled_2x_pngcrushed.png">
+    <Image Include="assets\scaledtaxform.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\mainmenu.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\up.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="assets\Char_001.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="assets\down.png">
@@ -64,7 +61,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\New Piskel.piskel" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

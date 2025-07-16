@@ -6,27 +6,36 @@ class tax
 
 
 private:	
-	int randscreenhei = GetRandomValue(0, GetScreenHeight());
-	int randscreenwid = GetRandomValue(0, GetScreenWidth());
+
 	vector<Vector2> projectileSpawn;
 	vector<tax> taxes;
-
+	Texture2D taxtex = LoadTexture("assets/taxform.png");
 
 
 
 public:
-	tax(Vector2 spawnPos)
+	Vector2 Pos{};
+	float initxvel{1};
+	float inityvel{1};
+	float dmg{100};
+	float expiretime{60};
+	int spawnpointlocation{ GetRandomValue(1, 4) };
+	int stupidtimergodieyouevilthing3thethreequal = 0;
+	
+	tax(Vector2 SpawnPos, int spawnLocation)
 	{
-		SpawnPos = spawnPos;
+		Pos.x = SpawnPos.x;
+		Pos.y = SpawnPos.y;
+		spawnpointlocation = spawnLocation;
 	}
 
-	Vector2 SpawnPos{};
+	void movethething(int perish);
 
-
+	void tick(float dT);
 
 	~tax()
 	{
-
+		
 	}
 
 };

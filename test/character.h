@@ -30,11 +30,8 @@ private:
 	//int ball = circenx, circeny, cirad;
 
 public:
-	character()
-	{
+	character(){}
 
-			
-	}
 	Rectangle charSource{ };
 	Rectangle charDest{};
 	Texture2D charText = LoadTexture("assets/down.png");

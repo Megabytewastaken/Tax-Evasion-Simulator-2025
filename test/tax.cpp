@@ -36,6 +36,7 @@ void tax::tick(float dT, Rectangle chara, int& money)
 	Rectangle taxsource{0, 0, taxtex.width, taxtex.height };
 	Rectangle taxdest{ Pos.x, Pos.y, taxtex.width, taxtex.height };
 	DrawRectangleRec(taxdest, PINK);
+	DrawRectangleRec(chara, RED);
 	if (!Utils::mainmenu)
 	{
 		DrawTexturePro(taxtex, taxsource, taxdest, Vector2{}, 0.f, WHITE);

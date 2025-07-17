@@ -40,18 +40,15 @@ void character::Tick(float dT)
 	{
 		frame = 1;
 	}
-	Rectangle charSource{ frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
-	Rectangle charDest{ characterPos.x , characterPos.y , (float)charWup.width / 4 * 0.5, (float)charWup.height * 0.5 };
+	 charSource = { frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
+	 charDest = { characterPos.x , characterPos.y , static_cast<float>(charWup.width / 4 * 0.5), static_cast<float>(charWup.height * 0.5) };
 
 	if (!Utils::mainmenu)
 	{
 		DrawTexturePro(charText, charSource, charDest, Vector2{}, 0.f, WHITE);
 	}
 	//DrawRectangleRec(charDest, RED);
-	//WorldPosLastFrame = worldPos;
-	
-	//circenx += direction.x * speed * dT;  // Update X position
-	//circeny += direction.y * speed * dT;
+
 }
 void character::getMovementInput(Vector2& direction, float deltaTime)
 {

@@ -49,10 +49,6 @@ public:
 	void getMovementInput(Vector2& direction, float deltaTime);
 	Vector2 characterPos{winwid/ 2, winhei/2};
 
-	//void undoMovement();
-	Rectangle source{};
-	Rectangle dest{};
-
 	~character()
 	{
 

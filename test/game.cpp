@@ -126,11 +126,13 @@ int main()
 		}
 		if (stupidtimergodieyouevilthing4theFinale == 10)
 		{
-			WaitTime(10);
+			WaitTime(7);
 			break;
 		}
 		EndDrawing();
 	}
+	SetClipboardText("I HATE THE IRS!");
+	OpenURL("https://www.youtube.com/watch_popup?v=mt6O3US9IE4");
 	UnloadTexture(evader.charText);
 		/*for (auto& tax : taxes)
 		{

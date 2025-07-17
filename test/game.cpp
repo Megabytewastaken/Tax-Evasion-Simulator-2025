@@ -10,7 +10,7 @@ int main()
 {	
 	int cash = 0;
 	int stupidtimergodieyouevilthing{0};
-	
+	bool looooserrr = false;
 	int stupidtimergodieyouevilthing2thesequal = 0;
 
 	//Make window + title
@@ -46,13 +46,22 @@ int main()
 		 
 		//Circle
 		
-		mainmenuu.Tick(dT);
+		
 		evader.Tick(dT);
 		//DrawRectangleRec(evader.charDest, PINK);
 		if (!Utils::mainmenu)
 		{
-			DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, DARKGREEN);
-			DrawText(TextFormat("$$$ Saved: %i", cash), 15, 15, 100, GREEN);
+			if (cash < 0)
+			{
+				DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, MAROON);
+				DrawText(TextFormat("$$$ Saved: %i", cash), 15, 15, 100, RED);
+			}
+			else
+			{
+				DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, DARKGREEN);
+				DrawText(TextFormat("$$$ Saved: %i", cash), 15, 15, 100, GREEN);
+			}
+
 			stupidtimergodieyouevilthing++;
 		}
 		if (stupidtimergodieyouevilthing == 12)
@@ -105,12 +114,16 @@ int main()
 		}
 		if (cash < -100)
 		{
-
+			Utils::YOUSUCK = true;
+			looooserrr = true;
+		}
+		//DrawRectangleRec(evader.charBox, PINK);
+		mainmenuu.Tick(dT);
+		if (looooserrr)
+		{
 			WaitTime(10);
 			break;
 		}
-		//DrawRectangleRec(evader.charBox, PINK);
-		
 		EndDrawing();
 	}
 	UnloadTexture(evader.charText);

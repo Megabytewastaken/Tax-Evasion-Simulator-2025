@@ -32,6 +32,10 @@ void menu::getMenuInput()
     {
         DrawTexturePro(men, tsource, tdest, Vector2{}, 0.f, WHITE);
     }
+    if (Utils::YOUSUCK)
+    {
+        DrawTexturePro(women, tsource, tdest, Vector2{}, 0.f, WHITE);
+    }
 
     if (IsKeyPressed(KEY_F))
     {

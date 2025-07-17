@@ -12,6 +12,7 @@ int main()
 	int stupidtimergodieyouevilthing{0};
 	bool looooserrr = false;
 	int stupidtimergodieyouevilthing2thesequal = 0;
+	int stupidtimergodieyouevilthing4theFinale = 0;
 
 	//Make window + title
 	InitWindow(Utils::winwid, Utils::winhei, "Enter to close the main menu!");
@@ -120,6 +121,10 @@ int main()
 		//DrawRectangleRec(evader.charBox, PINK);
 		mainmenuu.Tick(dT);
 		if (looooserrr)
+		{
+			stupidtimergodieyouevilthing4theFinale++;
+		}
+		if (stupidtimergodieyouevilthing4theFinale == 10)
 		{
 			WaitTime(10);
 			break;

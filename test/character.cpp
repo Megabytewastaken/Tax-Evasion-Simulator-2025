@@ -42,7 +42,7 @@ void character::Tick(float dT)
 	}
 	 charSource = { frame * charWup.width / 4 , 0, (float)charWup.width / 4, (float)charWup.height };
 	 charDest = { characterPos.x , characterPos.y , static_cast<float>(charWup.width / 4 * 0.5), static_cast<float>(charWup.height * 0.5) };
-	 charBox = { characterPos.x + ((charDest.width / 2)*0.5f) , characterPos.y + ((charDest.height / 2)*0.5f) , static_cast<float>(charWup.width / 4 * 0.25), static_cast<float>(charWup.height * 0.25)};
+	 charBox = { characterPos.x + ((charDest.width / 2)*0.f) , characterPos.y + ((charDest.height / 2)*0.5f) , static_cast<float>(charWup.width / 4 * 0.25), static_cast<float>(charWup.height * 0.25)};
 
 	if (!Utils::mainmenu)
 	{

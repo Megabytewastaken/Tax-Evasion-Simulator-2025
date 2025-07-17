@@ -107,7 +107,7 @@ int main()
 		{
 			CloseWindow();
 		}
-		DrawRectangleRec(evader.charBox, PINK);
+		//DrawRectangleRec(evader.charBox, PINK);
 		
 		EndDrawing();
 	}

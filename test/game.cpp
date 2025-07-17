@@ -106,6 +106,7 @@ int main()
 		if (cash < -100)
 		{
 
+			WaitTime(10);
 			break;
 		}
 		//DrawRectangleRec(evader.charBox, PINK);

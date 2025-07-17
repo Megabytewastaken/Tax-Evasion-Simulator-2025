@@ -48,7 +48,7 @@ int main()
 		
 		mainmenuu.Tick(dT);
 		evader.Tick(dT);
-		
+		DrawRectangleRec(evader.charDest, PINK);
 		if (!Utils::mainmenu)
 		{
 			DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, DARKGREEN);
@@ -101,7 +101,7 @@ int main()
 		}
 		for (auto& tax : taxes) 
 		{
-			tax.tick(dT);
+			tax.tick(dT, evader.charDest, cash);
 		}
 
 

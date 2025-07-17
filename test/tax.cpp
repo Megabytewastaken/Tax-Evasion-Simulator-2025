@@ -1,4 +1,6 @@
 #include "tax.h"
+#include "character.h"
+
 
 //assign a timer for spawn interval
 //add a random vector2 to the enemy pos vector
@@ -27,12 +29,13 @@ void tax::movethething(int perish)
 	}
 }
 
-void tax::tick(float dT)
+void tax::tick(float dT, Rectangle chara, int& money)
 {
 	/*float posX = GetRandomValue(0, Utils::winwid);
 	float posY = GetRandomValue(0, Utils::winhei);*/
 	Rectangle taxsource{0, 0, taxtex.width, taxtex.height };
 	Rectangle taxdest{ Pos.x, Pos.y, taxtex.width, taxtex.height };
+	DrawRectangleRec(taxdest, PINK);
 	if (!Utils::mainmenu)
 	{
 		DrawTexturePro(taxtex, taxsource, taxdest, Vector2{}, 0.f, WHITE);
@@ -43,10 +46,10 @@ void tax::tick(float dT)
 	{
 		//CloseWindow();
 	}
-	//CheckCollisionRecs(chardest, taxdest) 
-	//{
-	//	Character.damage();
-	//}
+	if (CheckCollisionRecs(chara, taxdest) == true)
+	{
+		money -= 45;
+	}
 }
 
 

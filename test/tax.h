@@ -31,7 +31,7 @@ public:
 
 	void movethething(int perish);
 
-	void tick(float dT);
+	void tick(float dT, Rectangle Chara, int& money);
 
 	~tax()
 	{

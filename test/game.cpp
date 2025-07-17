@@ -105,7 +105,8 @@ int main()
 		}
 		if (cash < -100)
 		{
-			CloseWindow();
+
+			break;
 		}
 		//DrawRectangleRec(evader.charBox, PINK);
 		
@@ -116,5 +117,5 @@ int main()
 		{
 			UnloadTexture();
 		}*/
-
+	CloseWindow();
 }

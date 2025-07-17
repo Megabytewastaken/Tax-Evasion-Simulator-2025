@@ -137,6 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\gamearea.png" />
+    <Image Include="assets\irs.png" />
     <Image Include="assets\up.png" />
     <Image Include="assets\down.png" />
     <Image Include="assets\left.png" />

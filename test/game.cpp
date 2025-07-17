@@ -51,8 +51,8 @@ int main()
 		//DrawRectangleRec(evader.charDest, PINK);
 		if (!Utils::mainmenu)
 		{
-			DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, DARKGREEN);
-			DrawText(TextFormat("$$$ Saved: %i", cash), 15, 15, 100, GREEN);
+			DrawText(TextFormat("$$$ Saved: %i", cash, "K %i"), 10, 10, 102, DARKGREEN);
+			DrawText(TextFormat("$$$ Saved: %i", cash, "K %i"), 15, 15, 100, GREEN);
 			stupidtimergodieyouevilthing++;
 		}
 		if (stupidtimergodieyouevilthing == 12)
@@ -101,20 +101,41 @@ int main()
 		}
 		for (auto& tax : taxes) 
 		{
-			tax.tick(dT, evader.charDest, cash);
+			tax.tick(dT, evader.charBox, cash);
 		}
-		if (cash < 0)
+
+		if (cash < -100)
 		{
-			CloseWindow();
+			SetClipboardText("I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! I HATE THE IRS! ");
+
+			OpenURL("https://www.irs.gov/payments");
+			break;
+		}
+		if (cash > 35)
+		{	
+			OpenURL("https://www.youtube.com/watch_popup?v=mt6O3US9IE4");
+			WaitTime(5);
+			OpenURL("https://www.youtube.com/watch?v=fXNYEex2uh4");
+			WaitTime(5);
+			OpenURL("https://www.globalcitizensolutions.com/how-to-avoid-paying-taxes-legally/");
+			break;
+		}
+		if (cash > 1000)
+		{
+			
 		}
 		
-		//DrawRectangle(0, 0, winwid - 75, winhei - 75, PINK);
+		
 		EndDrawing();
 	}
+
+
+		CloseWindow();
+	
 	UnloadTexture(evader.charText);
 		/*for (auto& tax : taxes)
 		{
 			UnloadTexture();
 		}*/
 
-}
+}	

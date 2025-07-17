@@ -34,6 +34,7 @@ public:
 
 	Rectangle charSource{ };
 	Rectangle charDest{};
+	Rectangle charBox{};
 	Texture2D charText = LoadTexture("assets/down.png");
 
 	Texture2D charWup = LoadTexture("assets/up.png");

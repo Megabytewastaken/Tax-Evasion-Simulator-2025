@@ -107,7 +107,7 @@ int main()
 		{
 			CloseWindow();
 		}
-		
+
 		//DrawRectangle(0, 0, winwid - 75, winhei - 75, PINK);
 		EndDrawing();
 	}

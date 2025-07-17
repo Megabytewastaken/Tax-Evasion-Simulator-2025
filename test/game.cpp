@@ -101,14 +101,14 @@ int main()
 		}
 		for (auto& tax : taxes) 
 		{
-			tax.tick(dT, evader.charDest, cash);
+			tax.tick(dT, evader.charBox, cash);
 		}
-		if (cash < 0)
+		if (cash < -100)
 		{
 			CloseWindow();
 		}
+		DrawRectangleRec(evader.charBox, PINK);
 		
-		//DrawRectangle(0, 0, winwid - 75, winhei - 75, PINK);
 		EndDrawing();
 	}
 	UnloadTexture(evader.charText);

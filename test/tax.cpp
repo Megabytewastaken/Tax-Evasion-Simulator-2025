@@ -35,9 +35,9 @@ void tax::tick(float dT, Rectangle chara, int& money)
 	float posY = GetRandomValue(0, Utils::winhei);*/
 	Rectangle taxsource{0, 0, taxtex.width, taxtex.height };
 	Rectangle taxdest{ Pos.x, Pos.y, taxtex.width, taxtex.height };
-	DrawRectangleRec(taxdest, PINK);
-	DrawRectangleRec(chara, RED);
-	if (!Utils::mainmenu)
+	//DrawRectangleRec(taxdest, PINK);
+	//DrawRectangleRec(chara, RED);
+	if (!Utils::mainmenu && !getbent)
 	{
 		DrawTexturePro(taxtex, taxsource, taxdest, Vector2{}, 0.f, WHITE);
 	}
@@ -47,9 +47,11 @@ void tax::tick(float dT, Rectangle chara, int& money)
 	{
 		//CloseWindow();
 	}
-	if (CheckCollisionRecs(chara, taxdest) == true)
+	if (CheckCollisionRecs(chara, taxdest) == true && !getbent)
 	{
 		money -= 45;
+		getbent = true;
+		UnloadTexture(taxtex);
 	}
 }
 

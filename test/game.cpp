@@ -48,7 +48,7 @@ int main()
 		
 		mainmenuu.Tick(dT);
 		evader.Tick(dT);
-		DrawRectangleRec(evader.charDest, PINK);
+		//DrawRectangleRec(evader.charDest, PINK);
 		if (!Utils::mainmenu)
 		{
 			DrawText(TextFormat("$$$ Saved: %i", cash), 10, 10, 102, DARKGREEN);

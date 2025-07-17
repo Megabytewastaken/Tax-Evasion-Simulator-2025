@@ -21,7 +21,8 @@ public:
 	float expiretime{60};
 	int spawnpointlocation{ GetRandomValue(1, 4) };
 	int stupidtimergodieyouevilthing3thethreequal = 0;
-	
+	bool getbent = false;
+
 	tax(Vector2 SpawnPos, int spawnLocation)
 	{
 		Pos.x = SpawnPos.x;
